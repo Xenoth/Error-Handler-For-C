@@ -1,4 +1,4 @@
-# ErrorHandlerForC
+# Error Handler For C
 ## Description
 This tiny little lib is designed to help managing errors for my C codes.
 
