@@ -13,8 +13,8 @@ First Edit ErrorEnum.h enumeration, you must not edit ERR_SUCCESS as it's used b
 2. You can check if something is wrong by using "Error_Handler.errorHappened()"
 3. If so you can get the last error_type with "Error_Handler.getLastError()"
 
-##Improvements
+## Improvements
 Using a Stack of error_type instead of a single error_type
 
-#Authors
+# Authors
 * BAILLEUX Pol (Xenoth) 
