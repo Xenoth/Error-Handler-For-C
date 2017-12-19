@@ -2,7 +2,7 @@
 ## Description
 This tiny little lib is designed to help managing errors for my C codes.
 
-It contains a little main example.
+It has a little main example.
 ## Requirements
 * cmake
 * gcc
