@@ -6,18 +6,22 @@
 #define ERRORHANDLER_H
 
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "ErrorEnum.h"
+#include "StackError.h"
 
 struct _error_handler {
 
-    error_type last_error;
 
-    bool (*errorHappened)(void);
+	void (*initErrorHandler)(void);
 
-    error_type (*getLastError)(void);
-    void (*setLastError)(error_type);
+	bool (*errorHappened)(void);
 
+	error_type (*getLastError)(void);
+	int (*setLastError)(error_type);
+
+	void (*printErrorStack)(FILE*);
 };
 
 extern struct _error_handler Error_Handler;
