@@ -30,24 +30,10 @@ int main() {
     printf("Attempting to open \"%s\"...\n", pathfile);
     FILE *file = openFileToRead(pathfile);
 
-    if(Error_Handler.errorHappened())
-    {
-        error_type error = Error_Handler.getLastError();
-        fprintf(stderr, "File not found\n");
-    }
-    else
-        fclose(file);
-
-
     printf("Attempting to divide 4 by 0...\n");
     float res = divide(4, 0);
 
-    if(Error_Handler.errorHappened())
-    {
-        error_type error = Error_Handler.getLastError();
-        fprintf(stderr, "Divide by zero\n");
-    }
-    else
-        printf("%f\n", res);
+    if(Error_Handler.errorHappened)
+        Error_Handler.printErrorStack(stderr);
 
 }

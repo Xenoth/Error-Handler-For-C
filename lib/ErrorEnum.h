@@ -7,7 +7,7 @@
 enum _error
 {
     // INTERNAL USE - DON'T EDIT
-    ERR_SUCCESS = 0,
+    ERR_NO_ERROR = 0,
 
     // EDIT YOUR ERRORS HERE
     ERR_FILE_NOT_FOUND = -1,
@@ -15,5 +15,7 @@ enum _error
 };
 
 typedef enum _error error_type;
+
+char* error_typeToString(error_type error);
 
 #endif
