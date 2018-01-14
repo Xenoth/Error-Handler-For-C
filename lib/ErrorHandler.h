@@ -10,11 +10,12 @@
 
 #include "ErrorEnum.h"
 #include "StackError.h"
+#include "OnErrorHappenedObservers.h"
 
 struct _error_handler {
 
 
-	void (*initErrorHandler)(void);
+	void (*init)(void);
 
 	bool (*errorHappened)(void);
 
@@ -22,8 +23,10 @@ struct _error_handler {
 	int (*setLastError)(error_type);
 
 	void (*printErrorStack)(FILE*);
+
+	void (*addOnErrorHappenedListener)(callbackError);
 };
 
-extern struct _error_handler Error_Handler;
+extern struct _error_handler ErrorHandler;
 
 #endif

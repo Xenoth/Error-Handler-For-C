@@ -17,6 +17,6 @@ struct _error_stack {
 
 };
 
-extern struct _error_stack Error_Stack;
+extern struct _error_stack ErrorStack;
 
 #endif
