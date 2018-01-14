@@ -1,8 +1,6 @@
 #ifndef ERRORS_H
 #define ERRORS_H
 
-#include <stddef.h>
-
 /* Error type for API */
 enum _error
 {
